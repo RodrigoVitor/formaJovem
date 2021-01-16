@@ -13,7 +13,7 @@ form p {
 }
 .input::-webkit-input-placeholder{
     color:black;
-    font-weight:200;
+    font-weight:300;
 }
 
 #input-submit{
