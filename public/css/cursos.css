@@ -19,6 +19,7 @@ form{
     width:50%;
     margin:45px auto 25px auto
 }
+
 form select{
     
 }
@@ -39,3 +40,9 @@ div form label{
     background-color:rgb(57, 57, 255);
     padding:10px;
 }
+
+.inscreve{
+    color:#fff;
+    float:right;
+}
+
