@@ -45,6 +45,7 @@
             <li><a href="cadJovem.html"> <i class="fas fa-user-plus"></i> Quero me Cadastrar </a></li>
         </ul>
         </nav>
+        <script src="../public/js/validacoes.js"></script>
     </header>
 
     <section>
@@ -55,14 +56,14 @@
             </p>
         </div>
         <!-- formulario -->
-        <form>
-            <p>Nome Completo: <input type="text" name="nome" class="input"></p>
-            <p>Data de nascimento: <input type="date" name="NomeFantasia" class="input"></p>
-            <p>CPF: <input type="text" name="CNPJ" class="input" maxlength="15" placeholder="xxx.xxx.xxx-xx"></p>
+        <form name="form">
+            <p>Nome Completo: <input type="text" name="nome" class="input" required></p>
+            <p>Data de nascimento: <input type="date" name="NomeFantasia" class="input" required></p>
+            <p>CPF: <input type="text" name="cpf" onKeyPress="MascaraCPF(form.cpf);" class="input" maxlength="15" placeholder="xxx.xxx.xxx-xx" required></p>
             <p>Endereço: <input type="text" name="Endereço" placehoder=""></p>
-            <p>Email do usuário: <input type="text" name="EmailEmpresa" class="input" placeholder="exemplo@email.com"></p>
+            <p>E-mail do usuário: <input type="email" name="EmailEmpresa" class="input" placeholder="exemplo@email.com"></p>
             <p>Senha: <input type="password" name="password" class="input" placeholder="xxxxxxx"></p>
-            <p>Telefone/Celular: <input type="text" name="TelCelJovem" class="input"></p>
+            <p>Telefone/Celular: <input type="text" name="TelCelJovem" class="input" onKeyPress="MascaraTelefone(form.TelCelJovem);" required></p>
             <p>Com quem mora? <input type="text" name="" id=""></p>
             <p>Tem filho? <input type="text" name="" id=""></p>
             <p>Sustenta alguém? <input type="text" name="" id=""></p>

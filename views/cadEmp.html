@@ -45,6 +45,7 @@
             <li><a href="cadJovem.html"> <i class="fas fa-user-plus"></i> Quero me Cadastrar </a></li>
         </ul>
         </nav>
+        <script src="../public/js/validacoes.js"></script>
     </header>
 
     <section>
@@ -53,30 +54,30 @@
             <p class="flow-text center-align"> Vem fazer parte desse movimento! </p>
         </div>
         <!-- formulario -->
-        <form>
-            <p>Razão Social: <input type="text" name="RazaoSocial" class="input"></p>
-            <p>Nome Fantasia: <input type="text" name="NomeFantasia" class="input"></p>
-            <p>CNPJ: <input type="text" name="CNPJ" class="input"></p>
+        <form name="form">
+            <p>Razão Social: <input type="text" name="RazaoSocial" class="input" required></p>
+            <p>Nome Fantasia: <input type="text" name="NomeFantasia" class="input" required></p>
+            <p>CNPJ: <input type="text" name="CNPJ" class="input" onKeyPress="MascaraCNPJ(form.CNPJ);" maxlength="18" required ></p>
             <p>Endereço: <input type="text" name="Endereço"></p>
-            <p>Email da Empresa: <input type="text" name="EmailEmpresa" class="input"></p>
-            <p>Senha: <input type="password" name="password" class="input"></p>
-            <p>Telefone/Celular: <input type="text" name="TelCel" class="input"></p>
+            <p>E-mail da Empresa: <input type=email name="EmailEmpresa" class="input"></p>
+            <p>Senha: <input type="password" name="password" class="input" required></p>
+            <p>Telefone/Celular: <input type="text" onKeyPress="MascaraTelefone(form.TelCel);" maxlength="15" name="TelCel" class="input" required></p>
             <p>Site: <input type="text" name="Site"></p>
-            <p>Número de Funcionarios: <input type="text" name="NumFunc" class="input"></p>
-            <p>Área de atuação: <input type="text" name="AreaAtua" id="" class="input" placeholder="ex: Industria, Varejo, Saúde, Educação, Etc."></p>
+            <p>Número de Funcionarios: <input type="number" name="NumFunc" class="input" required></p>
+            <p>Área de atuação: <input type="text" name="AreaAtua" id="" class="input" placeholder="ex: Industria, Varejo, Saúde, Educação, Etc." required></p>
             <p>
                 <label>
-                    <input type="checkbox" />
+                    <input type="checkbox" required/>
                     <span>Aceite para guardar os dados</span>
                 </label>
             <p>
                 <label>
-                    <input type="checkbox" />
+                    <input type="checkbox" required/>
                     <span>Aceite para compartilhar dados</span>
                 </label>
             <p>
                 <label>
-                    <input type="checkbox" />
+                    <input type="checkbox" required/>
                     <span>Comprometimento com termos de uso do site</span>
                 </label>
             </p>
