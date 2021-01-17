@@ -47,3 +47,7 @@ div form label{
     color:#fff;
     font-size:1.3em
 }
+.vagas span > p{
+    font-size:15px;
+    font-weight: bold;
+}
