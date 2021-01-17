@@ -18,7 +18,7 @@
 
 <body>
     <header>
-        <nav class="blue">
+        <nav>
             <div class="nav-wrapper">
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="center-align hide-on-med-and-down">
@@ -49,36 +49,37 @@
     </header>
 
     <section>
-        <div id="desc">
-            <h1 class="center-align"> Nome do Site </h1>
-            <p class="flow-text center-align"> Vem fazer parte desse movimento! </p>
+        <div id="venha">
+            <img src="../public/img/logo-main.png" alt="formAção" class="responsive-img">
+            <p class="flow-text center-align white-text"> Vem fazer parte desse movimento! </p>
         </div>
         <!-- formulario -->
         <form name="form">
-            <p>Razão Social: <input type="text" name="RazaoSocial" class="input" required></p>
-            <p>Nome Fantasia: <input type="text" name="NomeFantasia" class="input" required></p>
-            <p>CNPJ: <input type="text" name="CNPJ" class="input" onKeyPress="MascaraCNPJ(form.CNPJ);" maxlength="18" required ></p>
-            <p>Endereço: <input type="text" name="Endereço"></p>
-            <p>E-mail da Empresa: <input type=email name="EmailEmpresa" class="input"></p>
-            <p>Senha: <input type="password" name="password" class="input" required></p>
-            <p>Telefone/Celular: <input type="text" onKeyPress="MascaraTelefone(form.TelCel);" maxlength="15" name="TelCel" class="input" required></p>
-            <p>Site: <input type="text" name="Site"></p>
-            <p>Número de Funcionarios: <input type="number" name="NumFunc" class="input" required></p>
-            <p>Área de atuação: <input type="text" name="AreaAtua" id="" class="input" placeholder="ex: Industria, Varejo, Saúde, Educação, Etc." required></p>
-            <p>
+            <p class="white-text">Razão Social: <input type="text" name="RazaoSocial" class="input" required></p>
+            <p class="white-text">Usuario gestor: <input type="text" name="UsuarioGestor" class="input" required></p>
+            <p class="white-text">Nome Fantasia: <input type="text" name="NomeFantasia" class="input" required></p>
+            <p class="white-text">CNPJ: <input type="text" name="CNPJ" class="input" onKeyPress="MascaraCNPJ(form.CNPJ);" maxlength="18" required ></p>
+            <p class="white-text">Endereço: <input type="text" name="Endereço"></p>
+            <p class="white-text">E-mail da Empresa: <input type=email name="EmailEmpresa" class="input"></p>
+            <p class="white-text">Senha: <input type="password" name="password" class="input" required></p>
+            <p class="white-text">Telefone/Celular: <input type="text" onKeyPress="MascaraTelefone(form.TelCel);" maxlength="15" name="TelCel" class="input" required></p>
+            <p class="white-text">Site: <input type="text" name="Site"></p>
+            <p class="white-text">Número de Funcionarios: <input type="number" name="NumFunc" class="input" required></p class="white-text">
+            <p class="white-text">Área de atuação: <input type="text" name="AreaAtua" id="" class="input" placeholder="ex: Industria, Varejo, Saúde, Educação, Etc." required></p>
+            <p class="white-text">
                 <label>
                     <input type="checkbox" required/>
-                    <span>Aceite para guardar os dados</span>
+                    <span class="white-text">Aceite para guardar os dados</span>
                 </label>
             <p>
                 <label>
                     <input type="checkbox" required/>
-                    <span>Aceite para compartilhar dados</span>
+                    <span class="white-text">Aceite para compartilhar dados</span>
                 </label>
             <p>
                 <label>
                     <input type="checkbox" required/>
-                    <span>Comprometimento com termos de uso do site</span>
+                    <span class="white-text">Comprometimento com termos de uso do site</span>
                 </label>
             </p>
             <input type="submit" value="Cadastrar Empresa" class="waves-effect waves-light btn-small">
@@ -88,22 +89,23 @@
 
 
 
-    <footer class="page-footer blue">
+    <footer class="page-footer" id="footer">
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
-                    <h5 class="white-text">Nome do Site</h5>
+                    <h5 class="white-text">FormaAção</h5>
                     <p class="grey-text text-lighten-4">Nossos Parceiros</p>
                 </div>
                 <div class="col l4 offset-l2 s12">
                     <h5 class="white-text">Links</h5>
-                    <a href="#" class="grey-text text-lighten-3"> Quero me Cadastrar!</a>
+                    <a href="cadJovem.html" class="grey-text text-lighten-3"> Quero me Cadastrar!</a>
+                    <a href="entrar.html" class="grey-text text-lighten-3"> Ja tem uma conta? É só entrar! </a>
                 </div>
             </div>
         </div>
-        <div class="footer-copyright">
+        <div class="footer-copyright" id="copyright">
             <div class="container center-align">
-                © 2020 Copyright Nome da Equipe(projeto)
+                © 2020 Copyright FormAção
             </div>
         </div>
     </footer>
