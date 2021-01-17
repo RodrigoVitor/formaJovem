@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto 111</title>
     <!-- Links -->
-    <link rel="stylesheet" href="../public/css/cursos.css">
-    <link rel="stylesheet" href="../public/css/formEmpresa.css">
+    <link rel="stylesheet" href="../public/css/form.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
@@ -29,7 +28,7 @@
                     </li>
                     <li><a href="vagas.html"> <i class="fas fa-search-dollar"></i> Ver Vagas</a></li>
                     <li><a href="cursos.html"> <i class="fas fa-book-reader"></i> Ver Cursos</a></li>
-                    <li><a href="vagas.html"> <i class="fas fa-sign-in-alt"></i> Entrar</a></li>
+                    <li><a href="entrar.html"> <i class="fas fa-sign-in-alt"></i> Entrar</a></li>
                     <li><a href="cadJovem.html"> <i class="fas fa-user-plus"></i> Quero me Cadastrar</a></li>
                 </ul>
             </div>
@@ -42,76 +41,68 @@
             </li>
             <li><a href="vagas.html"> <i class="fas fa-search-dollar"></i> Ver Vagas </a></li>
             <li><a href="cursos.html"> <i class="fas fa-book-reader"></i> Ver Cursos </a></li>
-            <li><a href="vagas.html"> <i class="fas fa-sign-in-alt"></i> Entrar </a></li>
+            <li><a href="entrar.html"> <i class="fas fa-sign-in-alt"></i> Entrar </a></li>
             <li><a href="cadJovem.html"> <i class="fas fa-user-plus"></i> Quero me Cadastrar </a></li>
         </ul>
         </nav>
+        <script src="../public/js/validacoes.js"></script>
     </header>
 
     <section>
-        <!-- Só o usuario Jovem pode ver seus cursos -->
-        <!-- Se não tiver cursos cadastrado mostrar texto, ainda não ha cursos,algo assim -->
-        <div id="meusCursos">
-            [aqui vai aparecer a imagem dos cursos cadastrados]
+        <div id="desc">
+            <h1 class="center-align"> Nome do Site </h1>
+            <p class="flow-text center-align"> Altere seus dados!
+            </p>
         </div>
-        <!-- Fim da vizualização usuario Jovem -->
+        <!-- formulario -->
+        <form name="form">
+            <p>Nome Completo: <input type="text" name="nome" class="input" required></p>
+            <p>Data de nascimento: <input type="date" name="NomeFantasia" class="input" required></p>
+            <p>CPF: <input type="text" name="cpf" onKeyPress="MascaraCPF(form.cpf);" class="input" maxlength="15" placeholder="xxx.xxx.xxx-xx" required></p>
+            <p>Endereço: <input type="text" name="Endereço" placehoder=""></p>
+            <p>E-mail do usuário: <input type="email" name="EmailEmpresa" class="input" placeholder="exemplo@email.com"></p>
+            <p>Senha: <input type="password" name="password" class="input" placeholder="xxxxxxx"></p>
+            <p>Telefone/Celular: <input type="text" name="TelCelJovem" class="input" onKeyPress="MascaraTelefone(form.TelCelJovem);" required></p>
+            <p>Com quem mora? <input type="text" name="" id=""></p>
+            <p>Tem filho? <input type="text" name="" id=""></p>
+            <p>Sustenta alguém? <input type="text" name="" id=""></p>
+            <p>Qual a sua escolaridade <input type="text" name="" id="" placeholder="Ex: Ensino incompleto, Ensino fundamental completo, etc." class="input"></p>
+            <p>Gênero: </p>
+            <label>
+                <input name="group1" type="radio" />
+                <span>Masculino</span>
+            </label>
+            <label>
+                <input name="group1" type="radio" />
+                <span>Feminino</span>
+            </label>
+            <label>
+                <input name="group1" type="radio" checked/>
+                <span>Prefiro não dizer</span>
+            </label>
+            </p>
 
-        <!-- Pesquisa de cursos(tipo) -->
-        <div>
-            <form id="dadosForm">
-                <select class="browser-default">
-                    <option value="" disabled selected>Filtro</option>
-                    <option value="1">Saúde</option>
-                    <option value="2">Educação</option>
-                    <option value="3">Outro</option>
-                </select>
-                </i> <input type="search" name="" id="search" placeholder="Pesquisar por um curso">
-                <button class="white" id="btn-search"><i class="fas fa-search"></i></button>
-            </form>
-        </div>
-
-        <!-- Essa área somente o usuario empresa pode ver -->
-        <div>
-            <form id="cursoForm">
-                <p>Nome-do-Curso: <input type="text" name="nomeCurso"></p>
-                <p>Tipo-Material: <input type="text" name="tipoMaterial"></p>
-                <p>Duração-estimada: <input type="text" name="duracaoCurso"></p>
-                <p>Anexo-logo: <input type="text" name="anexoLogo"></p>
-                <p>Anexo-materias: <input type="text" name="anexoMaterial"></p>
-                <p>Publico-alvo: <input type="text" name="publicoAlvo"></p> 
-                <button type="submit" class="waves-effect waves-light btn-small">Publicar</button>         
-            </form>
-        </div>
-        <!-- Fim da vizualização Usuario Empresa -->
-
-        <!-- Informação -->
-        <div id="info">
-            <p class="flow-text">Conheça nossa série de cursos e materias de apoio desenvolvidas com foco
-                em capacitar jovens de periferia em busca de se inserir no mercado de trabalho</p>
-        </div>
-        <!-- Cursos -->
-        <div class="row center-align cursos">
-            <div class="col s4 "><span class="flow-text">Imagem conteúdo X</span></div>
-            <div class="col s8 "><span class="flow-text">Descrição e link conteudo X</span></div>
-            <a href="#" class="inscreve">Inscrever-se</a> <!-- somente usuario jovem cadastrado-->
-            <a href="editCurso.html" class="edita">Editar</a> <!--Somente usuario empresa-->
-        </div>
-
-        <div class="row center-align cursos">
-            <div class="col s4"><span class="flow-text">Imagem conteúdo Y.</span></div>
-            <div class="col s8"><span class="flow-text">Descrição e link conteudo Y</span></div>
-            <a href="#" class="inscreve">Inscrever-se</a>
-            <a href="#" class="edita">Editar</a>
-        </div>
-
-        <div class="row center-align cursos">
-            <div class="col s4"><span class="flow-text">Imagem conteúdo A.</span></div>
-            <div class="col s8"><span class="flow-text">Descrição e link conteudo A</span></div>
-            <a href="#" class="inscreve">Inscrever-se</a>
-            <a href="#" class="edita">Editar</a>
-        </div>
-        
+            <p>Leia antes de marcar:</p>
+            <label>
+                <input name="info1" type="radio" />
+                <span>Aceite para guardar os dados</span>
+            </label>
+            <label>
+                <input name="info2" type="radio" />
+                <span>Aceite para compartilhar dados + histórico de curso com a empresa</span>
+            </label>
+            <label>
+                <input name="info3" type="radio" />
+                <span>Comprometimento com termos de uso do site</span>
+            </label>
+            </p>
+            
+            <input type="submit" value="Atualizar dados" class="waves-effect waves-light btn-small">
+        </form>
     </section>
+
+
+
 
     <footer class="page-footer blue">
         <div class="container">
@@ -132,6 +123,11 @@
             </div>
         </div>
     </footer>
+
+
+
+
+
 
 
 

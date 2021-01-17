@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto 111</title>
     <!-- Links -->
-    <link rel="stylesheet" href="../public/css/vagas.css">
-    <link rel="stylesheet" href="../public/css/formEmpresa">
+    <link rel="stylesheet" href="../public/css/form.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
@@ -46,29 +45,16 @@
             <li><a href="cadJovem.html"> <i class="fas fa-user-plus"></i> Quero me Cadastrar </a></li>
         </ul>
         </nav>
+        <script src="../public/js/validacoes.js"></script>
     </header>
 
     <section>
-        <!-- Pesquisa de cursos(tipo) -->
-        <div>
-            <form>
-                <select class="browser-default">
-                    <option value="" disabled selected>Filtro</option>
-                    <option value="1">CLP</option>
-                    <option value="2">PJ</option>
-                    <option value="3">Freela</option>
-                </select>
-                </i> <input type="search" name="" id="search" placeholder="Pesquisar por vaga">
-                <button class="white" id="btn-search"><i class="fas fa-search"></i></button>
-            </form>
+        <div id="desc">
+            <h1 class="center-align"> Nome do Site </h1>
+            <p class="flow-text center-align"> Altere seus dados</p>
         </div>
-        <!-- Informação -->
-        <div id="info">
-            <p class="flow-text">Aqui você encontra as vagas abertas nas empresas parceiras para jovens da periferia em
-                busca de se inserir no mercado do trabalho</p>
-        </div>
-        <!-- Somente usuario empresa pode ver -->
-        <form id="vagaForm">
+        <!-- formulario -->
+        <form name="form">
             <p>Nome da Vaga: <input type="text" name="nomeVaga" placeholder="ex:Programador Java"></p>
             <p>Nivel de escolaridade: <input type="text" name="escolaridade" placeholder="Cursando Sistema de informação"> </p>
             <p>Cursos/Materias: <input type="text" name="cursoMaterial" placeholder="É necessario ter x curso"></p>
@@ -79,48 +65,13 @@
             <p>Anexo logo/capa: <input type="text" name="logoCapa" placeholder=""></p> 
             <p>Anexo adicionais: <input type="text" name="adicionais" placeholder="Inscrição aberta até x dias"></p> 
             <p>Cidade/Estado: <input type="text" name="cidade-estado" placeholder=""></p> 
-            <button type="submit" class="waves-effect waves-light btn-small">Publicar</button>         
+
+            <input type="submit" value="Alterar dados" class="waves-effect waves-light btn-small">
         </form>
-
-        <!-- Vagas -->
-        <!-- Só pode se candidatar quem tem cadastro -->
-        <div class="row center-align vagas">
-            <p class="data-pub">02/12/2020 Pousa Alegre-MG</p>
-            <div class="col s4 "><span class="flow-text"> [aqui vai logo da empresa]</span></div>
-            <div class="col s8 ">
-                <span class="flow-text"> 
-                    <p>Nome da vaga: </p>
-                    <p>Escolaridade: </p>
-                    <p>Curso/Material: </p>
-                    <p>Link: </p>
-                    <p>Beneficíos </p>
-                    <p>Atividades: </p>
-                    <p>Contato: </p>
-                    <p>Anexo adicionais: </p>
-                </span>
-                <a class="insert" href="#">Candidatar</a>
-                <a href="editVaga.html" class="edita">Editar</a> <!--Somente user empresa ve-->
-            </div>
-        </div>
-
-            
-        <div class="row center-align vagas">
-            <p class="data-pub">xx/xx/xx</p>
-            <div class="col s4"><span class="flow-text">Logo empresa Y.</span></div>
-            <div class="col s8"><span class="flow-text">Descrição e link empresa Y Y</span>
-                <a class="insert" href="#">Candidatar</a>
-            </div>
-        </div>
-
-        <div class="row center-align vagas">
-            <p class="data-pub">xx/xx/xx</p>
-            <div class="col s4"><span class="flow-text">Logo empresa A.</span></div>
-            <div class="col s8"><span class="flow-text">Descrição e link empresa A</span>
-                <a class="insert" href="#">Candidatar </a>
-            </div>
-        </div>
-
     </section>
+
+
+
 
     <footer class="page-footer blue">
         <div class="container">
@@ -141,6 +92,11 @@
             </div>
         </div>
     </footer>
+
+
+
+
+
 
 
 
