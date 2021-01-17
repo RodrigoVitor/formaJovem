@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto 111</title>
+    <title>Meus Cursos</title>
     <!-- Links -->
     <link rel="stylesheet" href="../public/css/cursoJovem.css">
     <!-- Font Awesome -->
@@ -15,21 +15,19 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
-
+<!-- Apenas usuario jovem tem acesso -->
 <body>
     <header>
-        <nav class="blue">
+        <nav>
             <div class="nav-wrapper">
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="center-align hide-on-med-and-down">
                     <li><a href="index.html"> <i class="fas fa-home"></i> Home</a></li>
                     <li><a href="quemSomos.html"> <i class="fas fa-users"></i> Quem Somos</a></li>
-                    <li><a href="cadEmp.html"> <i class="fas fa-business-time"></i> Ser uma empresa parceira</a>
-                    </li>
                     <li><a href="vagas.html"> <i class="fas fa-search-dollar"></i> Ver Vagas</a></li>
                     <li><a href="cursos.html"> <i class="fas fa-book-reader"></i> Ver Cursos</a></li>
-                    <li><a href="vagas.html"> <i class="fas fa-sign-in-alt"></i> Entrar</a></li>
-                    <li><a href="cadJovem.html"> <i class="fas fa-user-plus"></i> Quero me Cadastrar</a></li>
+                    <li><a href="cadJovem.html"> <i class="fas fa-sign-out-alt"></i> Sair </a></li>
+                    <li><a href="empresaPerfil">Nome do Usuario</a></li>
                 </ul>
             </div>
         </nav>
@@ -37,56 +35,50 @@
         <ul class="sidenav" id="mobile-demo">
             <li><a href="index.html"> <i class="fas fa-home"></i> Home</a></li>
             <li><a href="quemSomos.html"> <i class="fas fa-users"></i> Quem Somos</a></li>
-            <li><a href="cadEmp.html"> <i class="fas fa-business-time"></i> Ser uma empresa parceira</a>
-            </li>
             <li><a href="vagas.html"> <i class="fas fa-search-dollar"></i> Ver Vagas </a></li>
             <li><a href="cursos.html"> <i class="fas fa-book-reader"></i> Ver Cursos </a></li>
-            <li><a href="vagas.html"> <i class="fas fa-sign-in-alt"></i> Entrar </a></li>
-            <li><a href="cadJovem.html"> <i class="fas fa-user-plus"></i> Quero me Cadastrar </a></li>
+            <li><a href="cadJovem.html"> <i class="fas fa-sign-out-alt"></i> Sair </a></li>
+            <li><a href="empresaPerfil">Nome do Usuario</a></li>
         </ul>
         </nav>
     </header>
  
     <section>
         <div class="logoCurso">
-            [logo do curso]
-            <a href="#">verificar aprendizado</a>
+            <img src="../public/img/curso.png" alt="meucurso" width="30%">
+            <a href="verifAprende.html">verificar aprendizado</a>
             <a href="#" id="fazCurso">fazer curso</a>
         </div>
         <div class="logoCurso">
-            [logo do curso]
-            <a href="#">verificar aprendizado</a>
+            <img src="../public/img/curso1.png" alt="meucurso" width="30%">
+            <a href="verifAprende.html">verificar aprendizado</a>
             <a href="#" id="fazCurso">fazer curso</a>
         </div>
         <div class="logoCurso">
-            [logo do curso]
-            <a href="#">verificar aprendizado</a>
+            <img src="../public/img/curso2.png" alt="meucurso" width="30%">
+            <a href="verifAprende.html">verificar aprendizado</a>
             <a href="#" id="fazCurso">fazer curso</a>
         </div>
         <div class="logoCurso">
-            [logo do curso]
-            <a href="#">verificar aprendizado</a>
+            <img src="../public/img/curso3.png" alt="meucurso" width="30%">
+            <a href="verifAprende.html">verificar aprendizado</a>
             <a href="#" id="fazCurso">fazer curso</a>
         </div>
     </section>
 
     <footer>
-        <footer class="page-footer blue">
+        <footer class="page-footer" id="footer">
             <div class="container">
                 <div class="row">
-                    <div class="col l6 s12">
-                        <h5 class="white-text">Nome do Site</h5>
+                    <div class="col l6 s12 center-align">
+                        <h5 class="white-text">FormaAcao</h5>
                         <p class="grey-text text-lighten-4">Nossos Parceiros</p>
-                    </div>
-                    <div class="col l4 offset-l2 s12">
-                        <h5 class="white-text">Links</h5>
-                        <a href="#" class="grey-text text-lighten-3"> Quero me Cadastrar!</a>
                     </div>
                 </div>
             </div>
-            <div class="footer-copyright">
+            <div class="footer-copyright" id="copyright">
                 <div class="container center-align">
-                    © 2020 Copyright Nome da Equipe(projeto)
+                    © 2020 Copyright FormAção
                 </div>
             </div>
         </footer>

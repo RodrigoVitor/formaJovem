@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto 111</title>
     <!-- Links -->
+    <link rel="shortcut icon" type="image/x-icon" href="../public/img/logo-main.png">
     <link rel="stylesheet" href="../public/css/cursos.css">
     <link rel="stylesheet" href="../public/css/formEmpresa.css">
     <!-- Font Awesome -->
@@ -19,7 +20,7 @@
 
 <body>
     <header>
-        <nav class="blue">
+        <nav>
             <div class="nav-wrapper">
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="center-align hide-on-med-and-down">
@@ -29,7 +30,7 @@
                     </li>
                     <li><a href="vagas.html"> <i class="fas fa-search-dollar"></i> Ver Vagas</a></li>
                     <li><a href="cursos.html"> <i class="fas fa-book-reader"></i> Ver Cursos</a></li>
-                    <li><a href="vagas.html"> <i class="fas fa-sign-in-alt"></i> Entrar</a></li>
+                    <li><a href="entrar.html"> <i class="fas fa-sign-in-alt"></i> Entrar</a></li>
                     <li><a href="cadJovem.html"> <i class="fas fa-user-plus"></i> Quero me Cadastrar</a></li>
                 </ul>
             </div>
@@ -42,13 +43,13 @@
             </li>
             <li><a href="vagas.html"> <i class="fas fa-search-dollar"></i> Ver Vagas </a></li>
             <li><a href="cursos.html"> <i class="fas fa-book-reader"></i> Ver Cursos </a></li>
-            <li><a href="vagas.html"> <i class="fas fa-sign-in-alt"></i> Entrar </a></li>
+            <li><a href="entrar.html"> <i class="fas fa-sign-in-alt"></i> Entrar </a></li>
             <li><a href="cadJovem.html"> <i class="fas fa-user-plus"></i> Quero me Cadastrar </a></li>
         </ul>
         </nav>
     </header>
 
-    <section></section>
+    <section>
         <!-- Pesquisa de cursos(tipo) -->
         <div>
             <form id="dadosForm">
@@ -66,12 +67,12 @@
         <!-- Essa área somente o usuario empresa pode ver -->
         <div>
             <form id="cursoForm">
-                <p>Nome-do-Curso: <input type="text" name="nomeCurso"></p>
-                <p>Tipo-Material: <input type="text" name="tipoMaterial"></p>
-                <p>Duração-estimada: <input type="text" name="duracaoCurso"></p>
-                <p>Anexo-logo: <input type="text" name="anexoLogo"></p>
-                <p>Anexo-materias: <input type="text" name="anexoMaterial"></p>
-                <p>Publico-alvo: <input type="text" name="publicoAlvo"></p> 
+                <p class="white-text">Nome-do-Curso: <input type="text" name="nomeCurso"></p>
+                <p class="white-text">Tipo-Material: <input type="text" name="tipoMaterial"></p>
+                <p class="white-text">Duração-estimada: <input type="text" name="duracaoCurso"></p>
+                <p class="white-text">Anexo-logo: <input type="text" name="anexoLogo"></p>
+                <p class="white-text">Anexo-materias: <input type="text" name="anexoMaterial"></p>
+                <p class="white-text">Publico-alvo: <input type="text" name="publicoAlvo"></p> 
                 <button type="submit" class="waves-effect waves-light btn-small">Publicar</button>         
             </form>
         </div>
@@ -79,49 +80,86 @@
 
         <!-- Informação -->
         <div id="info">
-            <p class="flow-text">Conheça nossa série de cursos e materias de apoio desenvolvidas com foco
+            <p class="flow-text white-text">Conheça nossa série de cursos e materias de apoio desenvolvidas com foco
                 em capacitar jovens de periferia em busca de se inserir no mercado de trabalho</p>
         </div>
         <!-- Cursos -->
         <div class="row center-align cursos">
-            <div class="col s4 "><span class="flow-text">Imagem conteúdo X</span></div>
-            <div class="col s8 "><span class="flow-text">Descrição e link conteudo X</span></div>
+            <div class="col s4 "><img src="../public/img/curso.png" alt="curso"></div>
+            <div class="col s8 "><p>
+                <span class="black-text">Nome:</span> Excel <br>
+                <span class="black-text">Tipo:</span> Video <br>
+                <span class="black-text">Duração</span> 1 hora <br>
+            </p></div>
             <a href="#" class="inscreve">Inscrever-se</a> <!-- somente usuario jovem cadastrado-->
             <a href="editCurso.html" class="edita">Editar</a> <!--Somente usuario empresa-->
         </div>
 
         <div class="row center-align cursos">
-            <div class="col s4"><span class="flow-text">Imagem conteúdo Y.</span></div>
-            <div class="col s8"><span class="flow-text">Descrição e link conteudo Y</span></div>
-            <a href="#" class="inscreve">Inscrever-se</a>
-            <a href="#" class="edita">Editar</a>
+            <div class="col s4 "><img src="../public/img/curso1.png" alt="curso"></div>
+            <div class="col s8 "><p>
+                <span class="black-text">Nome:</span> Empreendedorismo <br>
+                <span class="black-text">Tipo:</span> Video <br>
+                <span class="black-text">Duração</span> 2 horas <br>
+            </p></div>
+            <a href="#" class="inscreve">Inscrever-se</a> <!-- somente usuario jovem cadastrado-->
+            <a href="editCurso.html" class="edita">Editar</a> <!--Somente usuario empresa-->
         </div>
 
         <div class="row center-align cursos">
-            <div class="col s4"><span class="flow-text">Imagem conteúdo A.</span></div>
-            <div class="col s8"><span class="flow-text">Descrição e link conteudo A</span></div>
-            <a href="#" class="inscreve">Inscrever-se</a>
-            <a href="#" class="edita">Editar</a>
+            <div class="col s4 "><img src="../public/img/curso2.png" alt="curso"></div>
+            <div class="col s8 "><p>
+                <span class="black-text">Nome:</span> Segurança na Fábrica <br>
+                <span class="black-text">Tipo:</span> Apresentação em pdf <br>
+                <span class="black-text">Duração</span> 15 minutos <br>
+            </p></div>
+            <a href="#" class="inscreve">Inscrever-se</a> <!-- somente usuario jovem cadastrado-->
+            <a href="editCurso.html" class="edita">Editar</a> <!--Somente usuario empresa-->
         </div>
+
+        <div class="row center-align cursos">
+            <div class="col s4 "><img src="../public/img/curso3.png" alt="curso"></div>
+            <div class="col s8 "><p>
+                <span class="black-text">Nome:</span> Segurança no Transito <br>
+                <span class="black-text">Tipo:</span> Apresentação em pdf <br>
+                <span class="black-text">Duração</span> 30 minutos <br>
+            </p></div>
+            <a href="#" class="inscreve">Inscrever-se</a> <!-- somente usuario jovem cadastrado-->
+            <a href="editCurso.html" class="edita">Editar</a> <!--Somente usuario empresa-->
+        </div>
+
+        <div class="row center-align cursos">
+            <div class="col s4 "><img src="../public/img/curso4.png" alt="curso"></div>
+            <div class="col s8 "><p>
+                <span class="black-text">Nome:</span> Marketing Digital <br>
+                <span class="black-text">Tipo:</span> Video <br>
+                <span class="black-text">Duração</span> 1 hora e 30 minutos <br>
+            </p></div>
+            <a href="#" class="inscreve">Inscrever-se</a> <!-- somente usuario jovem cadastrado-->
+            <a href="editCurso.html" class="edita">Editar</a> <!--Somente usuario empresa-->
+        </div>
+
+        
         
     </section>
 
-    <footer class="page-footer blue">
+    <footer class="page-footer" id="footer">
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
-                    <h5 class="white-text">Nome do Site</h5>
+                    <h5 class="white-text">FormAção</h5>
                     <p class="grey-text text-lighten-4">Nossos Parceiros</p>
                 </div>
                 <div class="col l4 offset-l2 s12">
                     <h5 class="white-text">Links</h5>
-                    <a href="#" class="grey-text text-lighten-3"> Quero me Cadastrar!</a>
+                    <a href="cadJovem.html" class="grey-text text-lighten-3"> Quero me Cadastrar!</a>
+                    <a href="entrar.html" class="grey-text text-lighten-3"> Ja tem uma conta? É só entrar! </a>
                 </div>
             </div>
         </div>
-        <div class="footer-copyright">
+        <div class="footer-copyright" id="copyright">
             <div class="container center-align">
-                © 2020 Copyright Nome da Equipe(projeto)
+                © 2020 Copyright FormAção
             </div>
         </div>
     </footer>

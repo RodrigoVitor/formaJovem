@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar vaga - FormAcao</title>
+    <title>Aprendizado - FormAcao</title>
     <!-- Links -->
-    <link rel="stylesheet" href="../public/css/form.css">
+    <link rel="stylesheet" href="../public/css/verifAprende.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
@@ -15,7 +15,7 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
-<!-- Area da empresa -->
+
 <body>
     <header>
         <nav>
@@ -24,7 +24,6 @@
                 <ul class="center-align hide-on-med-and-down">
                     <li><a href="index.html"> <i class="fas fa-home"></i> Home</a></li>
                     <li><a href="quemSomos.html"> <i class="fas fa-users"></i> Quem Somos</a></li>
-                    </li>
                     <li><a href="vagas.html"> <i class="fas fa-search-dollar"></i> Ver Vagas</a></li>
                     <li><a href="cursos.html"> <i class="fas fa-book-reader"></i> Ver Cursos</a></li>
                     <li><a href="cadJovem.html"> <i class="fas fa-sign-out-alt"></i> Sair </a></li>
@@ -36,62 +35,73 @@
         <ul class="sidenav" id="mobile-demo">
             <li><a href="index.html"> <i class="fas fa-home"></i> Home</a></li>
             <li><a href="quemSomos.html"> <i class="fas fa-users"></i> Quem Somos</a></li>
-            </li>
             <li><a href="vagas.html"> <i class="fas fa-search-dollar"></i> Ver Vagas </a></li>
             <li><a href="cursos.html"> <i class="fas fa-book-reader"></i> Ver Cursos </a></li>
-            <li><a href="cadJovem.html"> <i class="fas fa-sign-out-alt"></i> Sair </a></li>
-            <li><a href="empresaPerfil">Nome do Usuario</a></li>
+            <li><a href="vagas.html"> <i class="fas fa-sign-in-alt"></i> Entrar </a></li>
+            <li><a href="cadJovem.html"> <i class="fas fa-user-plus"></i> Quero me Cadastrar </a></li>
         </ul>
         </nav>
-        <script src="../public/js/validacoes.js"></script>
     </header>
-
+ 
     <section>
-        <div id="desc">
-            <p class="flow-text center-align white-text"> Altere seus dados</p>
+        <div class="curso">
+            [conteudo do curso]
         </div>
-        <!-- formulario -->
-        <form name="form">
-            <p class="white-text">Nome da Vaga: <input type="text" name="nomeVaga" placeholder="ex:Programador Java"></p>
-            <p class="white-text">Nivel de escolaridade: <input type="text" name="escolaridade" placeholder="Cursando Sistema de informação"> </p>
-            <p class="white-text">Cursos/Materias: <input type="text" name="cursoMaterial" placeholder="É necessario ter x curso"></p>
-            <p class="white-text">Link do Conteúdo: <input type="text" name="linkConteudo" placeholder="www.cursox.com"></p>
-            <p class="white-text">Resumo das atividades: <input type="text" name="atividade" placeholder="Criar app com java"></p>
-            <p class="white-text">Beneficíos: <input type="text" name="beneficio" placeholder="Almoço na empresa/passagem de onibus"></p> 
-            <p class="white-text">Contato para dúvida e inscrição: <input type="text" name="contatoDuvida" placeholder="para tirar todas as dúvidas acesse www.exemplo.com"></p>
-            <p class="white-text">Anexo logo/capa: <input type="text" name="logoCapa" placeholder=""></p> 
-            <p class="white-text">Anexo adicionais: <input type="text" name="adicionais" placeholder="Inscrição aberta até x dias"></p> 
-            <p class="white-text">Cidade/Estado: <input type="text" name="cidade-estado" placeholder=""></p> 
+        <div class="curso" id="doCurso">
+            <a href="#" class="">ver/baixar</a>
+            <a class="verCurso" onclick="showAsk()">Verificar Aprendizado</a>
+        </div>
+        <!-- Perguntas sobre o curso -->
+        <div class="curso" id="ask" >
+            <p class="white-text">Pergunta sobre o video: </p>
+            <label>
+                <input name="group1" type="radio" />
+                <span class="white-text">A</span>
+            </label>
+            <label>
+                <input name="group1" type="radio" />
+                <span class="white-text">B</span>
+            </label>
+            <label>
+                <input name="group1" type="radio" checked/>
+                <span class="white-text">C</span>
+            </label>
 
-            <input type="submit" value="Alterar dados" class="waves-effect waves-light btn-small">
-        </form>
+            <p class="white-text">Pergunta 2: </p>
+            <label>
+                <input name="group2" type="radio" />
+                <span class="white-text">A</span>
+            </label>
+            <label>
+                <input name="group2" type="radio" />
+                <span class="white-text">B</span>
+            </label>
+            <label>
+                <input name="group2" type="radio" checked/>
+                <span class="white-text">C</span>
+            </label>
+
+            <button class="waves-effect waves-light btn-small">Registrar resposta</button>
+        </div>
     </section>
 
-
-
-
-    <footer class="page-footer" id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12 center-align">
-                    <h5 class="white-text">Nome do Site</h5>
-                    <p class="grey-text text-lighten-4">Nossos Parceiros</p>
+    <footer>
+        <footer class="page-footer" id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12 center-align">
+                        <h5 class="white-text">FormaAcao</h5>
+                        <p class="grey-text text-lighten-4">Nossos Parceiros</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="footer-copyright" id="copyright"></div>
-            <div class="container center-align">
-                © 2020 Copyright Nome da Equipe(projeto)
+            <div class="footer-copyright" id="copyright">
+                <div class="container center-align">
+                    © 2020 Copyright FormAcao
+                </div>
             </div>
-        </div>
+        </footer>
     </footer>
-
-
-
-
-
-
-
 
     <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -103,6 +113,7 @@
             $('.sidenav').sidenav();
         });
     </script>
+    <script src="../public/js/verifAprende.js"></script>
 </body>
 
 </html>
