@@ -39,7 +39,7 @@ form{
 }
 @media screen and (max-width:780px){
     .vagas img{
-        float:left;
+        /* float:left; */
     }
     .vagas p{
         float:left;
