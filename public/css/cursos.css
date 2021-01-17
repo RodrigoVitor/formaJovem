@@ -15,18 +15,12 @@ section div p{
     float:right;
 }
 
-form{
+#dadosForm{
     width:50%;
     margin:45px auto 25px auto
 }
 
-form select{
-    
-}
-#search{
-    
-}
-div form label{
+#dadosForm label{
     font-weight: bold;
     color:black;
     font-size:1.2em;
@@ -44,5 +38,12 @@ div form label{
 .inscreve{
     color:#fff;
     float:right;
+    margin-top:10px
+}
+.edita{
+    color:#fff;
+    float:right;
+    margin-top:10px;
+    margin-right:20px;
 }
 

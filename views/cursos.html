@@ -7,6 +7,7 @@
     <title>Projeto 111</title>
     <!-- Links -->
     <link rel="stylesheet" href="../public/css/cursos.css">
+    <link rel="stylesheet" href="../public/css/cursoForm.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
@@ -50,7 +51,7 @@
     <section>
         <!-- Pesquisa de cursos(tipo) -->
         <div>
-            <form>
+            <form id="dadosForm">
                 <select class="browser-default">
                     <option value="" disabled selected>Filtro</option>
                     <option value="1">Saúde</option>
@@ -61,6 +62,19 @@
                 <button class="white" id="btn-search"><i class="fas fa-search"></i></button>
             </form>
         </div>
+        <!-- Essa área somente o usuario empresa pode ver -->
+        <div>
+            <form id="cursoForm">
+                <p>Nome-do-Curso: <input type="text" name="nomeCurso"></p>
+                <p>Tipo-Material: <input type="text" name="nomeCurso"></p>
+                <p>Duração-estimada: <input type="text" name="nomeCurso"></p>
+                <p>Anexo-logo: <input type="text" name="nomeCurso"></p>
+                <p>Anexo-materias: <input type="text" name="nomeCurso"></p>
+                <p>Publico-alvo: <input type="text" name="nomeCurso"></p> 
+                <button type="submit" class="waves-effect waves-light btn-small">Publicar</button>         
+            </form>
+        </div>
+
         <!-- Informação -->
         <div id="info">
             <p class="flow-text">Conheça nossa série de cursos e materias de apoio desenvolvidas com foco
@@ -71,18 +85,21 @@
             <div class="col s4 "><span class="flow-text">Imagem conteúdo X</span></div>
             <div class="col s8 "><span class="flow-text">Descrição e link conteudo X</span></div>
             <a href="#" class="inscreve">Inscrever-se</a>
+            <a href="#" class="edita">Editar</a>
         </div>
 
         <div class="row center-align cursos">
             <div class="col s4"><span class="flow-text">Imagem conteúdo Y.</span></div>
             <div class="col s8"><span class="flow-text">Descrição e link conteudo Y</span></div>
             <a href="#" class="inscreve">Inscrever-se</a>
+            <a href="#" class="edita">Editar</a>
         </div>
 
         <div class="row center-align cursos">
             <div class="col s4"><span class="flow-text">Imagem conteúdo A.</span></div>
             <div class="col s8"><span class="flow-text">Descrição e link conteudo A</span></div>
             <a href="#" class="inscreve">Inscrever-se</a>
+            <a href="#" class="edita">Editar</a>
         </div>
         
     </section>
